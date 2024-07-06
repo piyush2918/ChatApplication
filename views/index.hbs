@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/common.css">
+    <title>Webtext</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="outer-container container-fluid">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light   navbar-inner">
+                <a class="navbar-brand text-white" href="#">Webtext</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-white" href="#">Action</a>
+                                <a class="dropdown-item text-white" href="#">Another action</a>
+                                <div class="dropdown-divider text-white"></div>
+                                <a class="dropdown-item text-white" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled text-white" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form action="/login" class="form-inline my-2 my-lg-0">
+
+                        <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Login</button>
+                    </form>
+                    <form action="/signup" class="form-inline my-2 my-lg-0">
+
+                        <button class="btn btn-outline-success my-2 my-sm-0 btn-success text-white"
+                            type="submit">Signup</button>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="inner-div">
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class=" font-weight-bold text-white text-center">Increase your revenue</h1>
+                    <h1 class=" font-weight-bold text-white text-center">by connecting with clients</h1>
+                    <h1 class=" font-weight-bold text-white text-center">where they are
+                    </h1>
+                </div>
+                <br>
+                <br>
+                <br>
+
+
+
+
+                <div class="most">
+                    <div class="form d-flex justify-content-center">
+
+                        <input type="email" class="form-control " style="width:50%  ; display: inline;"
+                            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <button type="button" class=" btn btn-success btn-lg">Signup</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4 f1">
+        <h3 class="text-center ">Get on your customers' level</h3>
+        <h5 class="text-center font-weight-light">Your customers are on websites, the phone, social media, the list goes
+            on. JivoChat
+            allows visitors to
+            talk to you using their favorite platforms, so you never miss an opportunity to make a connection.
+
+        </h5>
+
+
+
+        <div class="container">
+            <h3 class="text-center" style="margin-top:80px">JivoChat users have access to 24/7 customer support</h3>
+            <h5 class="text-center font-weight-light">We’re here when you need us! Technical support is available around
+                the clock.</h5>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <div class="container">
+        <div class="card text-center foot ">
+
+            <div class="card-body">
+                <h5 class="card-title text-white">Special title treatment</h5>
+                <p class="card-text text-white">With supporting text below as a natural lead-in to additional content.
+                </p>
+                <a href="#" class="btn btn-success text-white">Go somewhere</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 
+
+
+             <div class=" signup">
+                            <h1>Signup Page </h1>
+
+                            <input id="signupemail" type="text" placeholder="Enter email">
+                            <br>
+                            <input id="signuppin" type="text" placeholder="Enter password">
+                            <br>
+                            <button id="signupbtn">Submit</button>
+
+                    </div>
+
+                    <div class="chat">
+                        <h1>Welcome to The Chat box </h1>
+                        <input id="everyone" type="text" placeholder="Send to (default everyone) ">
+
+                        <input style="margin-left: 50px;" id="message" type="text" placeholder="To individual">
+
+
+                        <button style="margin-left: 50px;" id="btnsend">Send
+
+
+
+                        </button>
+                        <ul id="ul"></ul>
+                    </div> -->
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

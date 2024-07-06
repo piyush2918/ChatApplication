@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/room.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+
+    <title>Webtext</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="signup">
+        <div class="room container-fluid">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light   navbar-inner">
+                    <a class="navbar-brand text-white" href="#">Webtext</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-white" href="#">Action</a>
+                                    <a class="dropdown-item text-white" href="#">Another action</a>
+                                    <div class="dropdown-divider text-white"></div>
+                                    <a class="dropdown-item text-white" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled text-white" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                        <form action="/login" class="form-inline my-2 my-lg-0">
+
+                            <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Login</button>
+                        </form>
+                        <form action="/signup" class="form-inline my-2 my-lg-0">
+
+                            <button class="btn btn-outline-success my-2 my-sm-0 btn-success text-white"
+                                type="submit">Signup</button>
+                        </form>
+                    </div>
+                </nav>
+
+                <div class="container">
+                    <div class="inner-div">
+                        <br>
+                        <br>
+                        <br>
+                        <h1 class=" font-weight-bold text-white text-center">Connect With Your Friends </h1>
+                        <h1 class=" font-weight-bold text-white text-center">Make Your Rooms </h1>
+                        <h1 class=" font-weight-bold text-white text-center">Chit-Chat
+
+                        </h1>
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+
+
+
+                    <div class="most">
+                        <div class="form d-flex justify-content-center">
+
+                            <input type="text" class="form-control " id="username" style="width:50%  ; display: inline;"
+                                aria-describedby="emailHelp" placeholder="Enter Username">
+
+
+
+
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form d-flex justify-content-center">
+
+                            <input type="text" id="room" class="form-control " style="width:50%  ; display: inline;"
+                                aria-describedby="emailHelp"
+                                placeholder="Room no (  If join public leave this field  )">
+
+
+
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form d-flex justify-content-center">
+                            <div>
+                                <button id="joinroom" type="button" class=" btn btn-success btn-lg">Join Room</button>
+                            </div>
+                            <br>
+
+                            <br>
+                            <div class="ml-4">
+                                <button id="joinpublic" type="button" class=" btn btn-success btn-lg">Join
+                                    Public</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="chatbox">
+        <div class="outercontainer ">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <a class="navbar-brand text-white" href="#">Webtext</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled text-white" href="#" tabindex="-1"
+                                    aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0 text-white"
+                                type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <hr>
+
+
+        {{!-- chatbox --}}
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-2  chat bg-gradient-success  " style="height:600px">
+                    <h5 id="way" class="text-left  text-white">room</h5>
+                    <h5 id="name" style="border-bottom: solid white 2px ;" class="text-right mt-4 text-white">username
+                    </h5>
+
+
+                </div>
+                <div class="col-sm-10 chat1" style="position: relative; border:black solid 1px">10
+                    <h5 class=" text-center mt-0 ">Message</h5>
+
+
+                    <hr>
+                    <hr>
+                    <div style="height:320px" class="message">
+                        <ul id="ul"></ul>
+
+                    </div>
+
+
+
+
+                    <div class="" style=" position: absolute; bottom:20px">
+                        <hr>
+                        <hr>
+
+                        <input class="form-control mr-sm-2" id="message" placeholder="Enter message ">
+                        <button id="btnsend" class="btn btn-outline-success my-2 my-sm-0" type="submit">SEND</button>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <hr>
+            <h4 class="text-center">Made With Love by aditya </h4>
+        </div>
+
+    </div>
+    </div>
+
+
+
+    {{!-- ---------------------------------------------- --}}
+
+
+    {{!-- ASKING FOR ROOM OPTION --}}
+
+
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

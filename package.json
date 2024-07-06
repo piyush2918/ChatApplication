@@ -1,0 +1,29 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adityakushwaha142/webtext.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adityakushwaha142/webtext/issues"
+  },
+  "homepage": "https://github.com/Adityakushwaha142/webtext#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.11.10",
+    "socket.io": "^3.0.5"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

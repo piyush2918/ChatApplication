@@ -1,0 +1,38 @@
+.outer-container{
+    background: #00bf54;
+    height:600px ; 
+    
+}
+.outer-containers{
+    background: #00bf54;
+   
+    
+}
+.outercontainer{
+    background: #00bf54;
+}
+.container{
+    background:transparent ; 
+}
+.navbar-inner{
+    background-color: transparent;
+}
+.foot{
+    background: #00bf54;
+    
+}
+.f1{
+    height:700px ; 
+}
+.chat{
+    background: #00bf54;
+    width:300px   ; 
+    height:665px ; 
+}
+.col2{
+    background-color:rebeccapurple
+}
+.room{
+    background-color: #00bf54;
+    height:755px
+}
