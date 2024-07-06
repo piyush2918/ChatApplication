@@ -13,6 +13,7 @@ let socketmap = {};
 const io = socketio(server);
 
 app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "/public")));
 io.on("connection", (socket) => {
   console.log("connecction establishes", socket.id);
